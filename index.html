@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>filtr</title>
+    <link rel="stylesheet" href="/filtr/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="a-cont">
+            <div class="filter">
+                <div class="filter__big-block"></div>
+                <div class="filter__title">
+                    Все программы обучения
+                </div>
+                <div class="filter__wrap">
+                    <div class="filter__block">
+                        <div class="filter__search">
+                            <input type="text" placeholder="Поиск">
+                        </div>
+                        <div class="filter__checkbox" id="theme">
+                            <div class="filter__checkbox__title">
+                                Тематика
+                            </div>
+                            <div class="filter__checkbox__content">
+                                <label>
+                                    <input type="checkbox" checked data-id="1">
+                                    <div class="input__name">
+                                        1C
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked data-id="2">
+                                    <div class="input__name">
+                                        3D - анимация
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked data-id="3">
+                                    <div class="input__name">
+                                        Adobe
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="4">
+                                    <div class="input__name">
+                                        MS Office
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="5">
+                                    <div class="input__name">
+                                        SMM
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="6">
+                                    <div class="input__name">
+                                        1C
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="7">
+                                    <div class="input__name">
+                                        3D - анимация
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="8">
+                                    <div class="input__name">
+                                        Adobe
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="9">
+                                    <div class="input__name">
+                                        MS Office
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox" data-id="10">
+                                    <div class="input__name">
+                                        SMM
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__checkbox">
+                            <div class="filter__checkbox__title">
+                                Формат
+                            </div>
+                            <div class="filter__checkbox__content">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Онлайн
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Очно
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Индивидуально
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Дистанционно
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Очно - дистанционно
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__slider">
+                            <div class="filter__slider__title">
+                                Стоимость
+                            </div>
+                            <div class="range-slider">
+                                <input type="text" class="js-range-slider" value="" />
+                            </div>
+                            <div class="extra-controls">
+                                <input type="text" class="js-input-from" value="0" />
+                                <input type="text" class="js-input-to" value="0" />
+                            </div>
+                        </div>
+                        <div class="filter__checkbox">
+                            <div class="filter__checkbox__title">
+                                Тип обучения
+                            </div>
+                            <div class="filter__checkbox__content">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Курсы
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="input__name">
+                                        Профессия
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__arrow">
+                            <img src="/filtr/img/arrow.svg">
+                        </div>
+                    </div>
+                    <div class="filter__mobile">
+                        <div class="filter__search">
+                            <input type="text" placeholder="Поиск">
+                        </div>
+                        <div class="filter__tab__wrap">
+                            <div class="mob__filter__btn">
+                                Фильтр
+                            </div>
+                            <div class="filter__sort__btn">
+                                Сортировка
+                            </div>
+                        </div>
+                        <div class="mob__tab__content">
+                            <div class="mob__tab__filter">
+                                <div class="filter__block__mob">
+                                    <div class="filter__checkbox" id="theme-mob">
+                                        <div class="filter__checkbox__title">
+                                            Тематика
+                                        </div>
+                                        <div class="filter__checkbox__content">
+                                            <label>
+                                                <input type="checkbox" checked data-id="1">
+                                                <div class="input__name">
+                                                    1C
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" checked data-id="2">
+                                                <div class="input__name">
+                                                    3D - анимация
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" checked data-id="3">
+                                                <div class="input__name">
+                                                    Adobe
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="4">
+                                                <div class="input__name">
+                                                    MS Office
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="5">
+                                                <div class="input__name">
+                                                    SMM
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="6">
+                                                <div class="input__name">
+                                                    1C
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="7">
+                                                <div class="input__name">
+                                                    3D - анимация
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="8">
+                                                <div class="input__name">
+                                                    Adobe
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="9">
+                                                <div class="input__name">
+                                                    MS Office
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" data-id="10">
+                                                <div class="input__name">
+                                                    SMM
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__checkbox">
+                                        <div class="filter__checkbox__title">
+                                            Тип обучения
+                                        </div>
+                                        <div class="filter__checkbox__content">
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Курсы
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Профессия
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__checkbox">
+                                        <div class="filter__checkbox__title">
+                                            Формат
+                                        </div>
+                                        <div class="filter__checkbox__content">
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Онлайн
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Очно
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Индивидуально
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Дистанционно
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">
+                                                <div class="input__name">
+                                                    Очно - дистанционно
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__checkbox">
+                                        <div class="filter__checkbox__title">
+                                            Стоимость
+                                        </div>
+                                        <div class="filter__checkbox__content">
+                                            <div class="range-slider">
+                                                <input type="text" class="js-range-slider" value="" />
+                                            </div>
+                                            <div class="input__btn__wrap">
+                                                <div class="extra-controls">
+                                                    <input type="text" class="js-input-from" value="0" />
+                                                    <input type="text" class="js-input-to" value="0" />
+                                                </div>
+                                                <div class="btn__submit">
+                                                    Применить
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mob__tab__sort">
+                                <div class="sort__item">Стоимость</div>
+                                <div class="sort__item">Дата запуска</div>
+                                <div class="sort__item active">Онлайн</div>
+                                <div class="sort__item">Новый курс</div>
+                            </div>
+                        </div>
+                        <div class="filter__selected" id="area-mob">
+                            <!-- подтягиваются автоматически из выбранных инпутов -->
+                        </div>
+                    </div>
+                    <div class="filter__content">
+                        <div class="filter__up">
+                            <div class="filter__selected" id="area">
+                                <!-- подтягиваются автоматически из выбранных инпутов -->
+                            </div>
+                            <div class="filter__sort__btn__wrap">
+                                <div class="filter__sort">
+                                    <select value="Сортировка" class="filter__sort__btn">
+                                        <option value="value1">Стоимость</option>
+                                        <option value="value1">Дата запуска</option>
+                                        <option value="value1">Онлайн</option>
+                                        <option value="value1">Новый курс</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content__head">
+                                <div class="content__title">
+                                    Профессии
+                                </div>
+                                <div class="content__info">
+                                    <div class="content__info__hidden">
+                                        <div class="content__info__title">
+                                            Профессия
+                                        </div>
+                                        <div class="content__info__desc">
+                                            Состоит из нескольких курсов, воркшопов и практикумов. Вы сможете
+                                            полностью
+                                            освоить новую профессию с нуля, собрать портфолио, подготовить резюме
+                                            и найти
+                                            работу.
+                                        </div>
+                                        <div class="content__info__title">
+                                            Курс
+                                        </div>
+                                        <div class="content__info__desc">
+                                            Состоит из нескольких модулей с видеоматериалами и практикой. Вы сможете
+                                            изучить азы профессии, освоить конкретный навык или инструмент
+                                            и добавить
+                                            их в своё портфолио.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__desc">
+                                    160 профессий
+                                </div>
+                            </div>
+                            <div class="content__cards">
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                            </div>
+                            <div class="content__btn">
+                                Показать еще
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content__head">
+                                <div class="content__title">
+                                    Курсы
+                                </div>
+                                <div class="content__info">
+                                    <div class="content__info__hidden">
+                                        <div class="content__info__title">
+                                            Профессия
+                                        </div>
+                                        <div class="content__info__desc">
+                                            Состоит из нескольких курсов, воркшопов и практикумов. Вы сможете
+                                            полностью
+                                            освоить новую профессию с нуля, собрать портфолио, подготовить резюме
+                                            и найти
+                                            работу.
+                                        </div>
+                                        <div class="content__info__title">
+                                            Курс
+                                        </div>
+                                        <div class="content__info__desc">
+                                            Состоит из нескольких модулей с видеоматериалами и практикой. Вы сможете
+                                            изучить азы профессии, освоить конкретный навык или инструмент
+                                            и добавить
+                                            их в своё портфолио.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__desc">
+                                    96 курсов
+                                </div>
+                            </div>
+                            <div class="content__cards">
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                                <div class="content__card"></div>
+                            </div>
+                            <div class="content__btn">
+                                Показать еще
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="/filtr/script.js"></script>
+</body>
