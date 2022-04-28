@@ -192,7 +192,8 @@ body {
     height: 14px;
 }
 
-.filter__sort__btn {
+
+body .ss-main .ss-single-selected, .filter__sort__btn {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 18px;
@@ -201,18 +202,51 @@ body {
     border: 1px solid #667EEA;
     box-sizing: border-box;
     border-radius: 65px;
-    padding: 12px 20px;
     position: relative;
     width: 182px;
     height: 50px;
     cursor: pointer;
+    z-index: 2;
 }
+
+body .ss-main .ss-single-selected.ss-open-below {
+    border-radius: 65px;
+}
+
+body section .a-cont .filter .ss-arrow {
+    display: none;
+}
+
+.ss-content.ss-open {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    padding: 25px 0 0 0;
+    z-index: 1;
+    top: 25px;
+}
+
+.ss-content {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 0 0 25px 25px;
+}
+
+body .ss-main .ss-single-selected .placeholder,
+.ss-main .ss-single-selected .placeholder {
+    padding: 12px 20px;
+    height: 12px;
+}
+
 
 .filter__sort__btn__wrap {
     position: relative;
 }
 
-.filter__sort__btn__wrap::before {
+.ss-single-selected::before {
     position: absolute;
     display: block;
     content: '';
@@ -221,8 +255,42 @@ body {
     right: 18px;
     width: 14px;
     height: 23px;
-    z-index: 1;
+    z-index: 3;
+    pointer-events: none;
 }
+
+.ss-single-selected.ss-open-below::before {
+    transform: rotate(90deg);
+}
+
+body .ss-main .ss-single-selected .placeholder .ss-disabled {
+    color: #333333;
+    height: 25px;
+}
+
+body section .a-cont .filter .ss-option {
+    margin: 12px 31px 0px 20px;
+    padding: 0 0 17px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+body section .a-cont .filter .ss-option:last-child {
+    border: none;
+}
+
+body .ss-content .ss-list {
+    max-height: 100%;
+}
+
+body section .a-cont .filter .ss-option.ss-disabled {
+    color: #667EEA;
+}
+
+body section .a-cont .filter .ss-option:hover {
+    background: transparent;
+    color: #333333;
+}
+
 
 .filter__sort select {
     outline: none;

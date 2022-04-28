@@ -249,3 +249,8 @@ $inputTo.on("input", function () {
     });
 });
 
+new SlimSelect({
+    select: '#slim-select',
+    showSearch: false,
+    placeholder: "Сортировка"
+  })

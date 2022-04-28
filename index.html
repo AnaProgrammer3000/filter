@@ -345,11 +345,12 @@
                             </div>
                             <div class="filter__sort__btn__wrap">
                                 <div class="filter__sort">
-                                    <select value="Сортировка" class="filter__sort__btn">
+                                    <select value="Сортировка" id="slim-select">
+                                        <option data-placeholder="true"></option>
                                         <option value="value1">Стоимость</option>
-                                        <option value="value1">Дата запуска</option>
-                                        <option value="value1">Онлайн</option>
-                                        <option value="value1">Новый курс</option>
+                                        <option value="value2">Дата запуска</option>
+                                        <option value="value3">Онлайн</option>
+                                        <option value="value4">Новый курс</option>
                                     </select>
                                 </div>
                             </div>
@@ -452,5 +453,8 @@
                 </div>
             </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet">
+    </link>
     <script src="/filtr/script.js"></script>
 </body>
